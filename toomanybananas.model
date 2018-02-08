@@ -21,7 +21,7 @@ var roommates: Array<Person>[1..5];
 rule step for state in roommates {
   match state {
     Happy {
-      state = Hungry;
+      state = GoingToStore;
     }
 
     Hungry {
