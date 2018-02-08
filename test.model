@@ -8,7 +8,7 @@
 
 var bananas : 0..100 = 2;
 var notePresent: Boolean;
-var noteCounter: 0..5;
+var noteCounter: 0..5 = 5;
 type Person : either {
   Happy,
   Hungry,
@@ -25,7 +25,9 @@ rule step for state in roommates {
   match state {
     Happy {
       state = Hungry;
-      /*noteCounter -= 1;*/
+      if (notePresent) {
+        noteCounter -= 1;
+      }
     }
 
     Hungry {
