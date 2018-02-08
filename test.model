@@ -65,7 +65,7 @@ rule step for state in roommates {
     }
     
     Waiting {
-      if bananas == 0 {
+      if bananas > 0 {
         state = Hungry;
       }
     }
