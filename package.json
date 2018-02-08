@@ -26,7 +26,7 @@
       "view": "toomanybananas.jsx"
     },
     {
-      "id": "test",
+      "id": "test2",
       "label": "Too Many Bananas: Test",
       "spec": "test.model",
       "view": "toomanybananas.jsx"
