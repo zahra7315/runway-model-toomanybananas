@@ -19,6 +19,7 @@ type Person : either {
 };
 var roommates: Array<Person>[1..5];
 
+
 rule step for state in roommates {
   match state {
     Happy {
