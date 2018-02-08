@@ -30,7 +30,7 @@ rule step for state in roommates {
 
     Hungry {
       if bananas == 0 {
-        if (notePresent && noteCounter > 0) {
+        if (notePresent && noteCounter > 1) {
           noteCounter -= 1;
           state = Waiting;
         } else {
