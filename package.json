@@ -24,6 +24,12 @@
       "label": "Too Many Bananas: Correct",
       "spec": "toomanybananas.model",
       "view": "toomanybananas.jsx"
+    },
+    {
+      "id": "test",
+      "label": "Too Many Bananas: Test",
+      "spec": "test.model",
+      "view": "toomanybananas.jsx"
     }
   ]
 }
