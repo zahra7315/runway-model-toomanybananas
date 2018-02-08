@@ -8,7 +8,6 @@
 
 var bananas : 0..100 = 2;
 var notePresent: Boolean;
-var noteCounter: 0..4 = 4;
 type Person : either {
   Happy,
   Hungry,
@@ -16,8 +15,7 @@ type Person : either {
   ReturningFromStore {
     carrying: 1..8
   },
-  Failed,
-  Waiting
+  Failed
 };
 var roommates: Array<Person>[1..5];
 
@@ -30,12 +28,10 @@ rule step for state in roommates {
 
     Hungry {
       if bananas == 0 {
-        if (notePresent && noteCounter > 1) {
-          noteCounter -= 1;
-          state = Waiting;
+        if (notePresent) {
+          // Roommate at store: try again later
         } else {
           notePresent = True;
-          noteCounter = 4;
           state = GoingToStore;
         }
       } else {
@@ -51,7 +47,7 @@ rule step for state in roommates {
     }
 
     ReturningFromStore(bag) {
-      if (urandomRange(0, 2) == 0) {
+      if (urandomRange(0, 9) == 0) {
         state = Failed;
       } else {
         bananas += bag.carrying;
@@ -62,12 +58,6 @@ rule step for state in roommates {
     
     Failed {
       state = Hungry;
-    }
-    
-    Waiting {
-      if (bananas > 0 || !notePresent) {
-        state = Hungry;
-      }
     }
   }
 }
