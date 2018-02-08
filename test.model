@@ -14,7 +14,7 @@ type Person : either {
   Hungry,
   GoingToStore,
   ReturningFromStore {
-    carrying: 0..8
+    carrying: 1..8
   },
   Failed,
   Waiting
