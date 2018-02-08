@@ -30,7 +30,7 @@ rule step for state in roommates {
     Hungry {
       if bananas == 0 {
         if (notePresent && noteCounter > 1) {
-          noteCounter--;
+          noteCounter = noteCounter - 1;
         } else {
           notePresent = True;
           noteCounter = 5;
