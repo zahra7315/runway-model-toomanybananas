@@ -57,6 +57,7 @@ rule step for state in roommates {
     }
     
     Failed {
+      state = Hungry;
     }
   }
 }
