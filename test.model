@@ -25,7 +25,7 @@ rule step for state in roommates {
   match state {
     Happy {
       state = Hungry;
-      noteCounter -= 1;
+      /*noteCounter -= 1;*/
     }
 
     Hungry {
