@@ -6,6 +6,12 @@
  * https://opensource.org/licenses/MIT
  */
 
+/*
+hh
+kkk
+ghjgjh
+*/
+
 var bananas : 0..100 = 2;
 var notePresent: Boolean;
 type Person : either {
