@@ -31,7 +31,7 @@ rule step for state in roommates {
     }
 
     Hungry {
-      if bananas < 4 {
+      if bananas <= 4 {
         if (notePresent) {
           // Roommate at store: try again later
         } else {
