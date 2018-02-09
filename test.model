@@ -34,7 +34,7 @@ rule step for state in roommates {
           if count == 1 {
            notePresent = True;
            state = GoingToStore;   
-   }
+   
         } else {
           notePresent = True;
           state = GoingToStore;
