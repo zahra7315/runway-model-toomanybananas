@@ -19,7 +19,7 @@ type Person : either {
   Hungry,
   GoingToStore,
   ReturningFromStore {
-    carrying: 1..8
+    carrying: 1..4
   }
 };
 var roommates: Array<Person>[1..5];
