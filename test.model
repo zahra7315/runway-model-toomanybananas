@@ -7,7 +7,7 @@
  */
 
 var bananas : 0..100 = 2;
-type count : 0;
+type count = 0;
 var notePresent: Boolean;
 type Person : either {
   Happy,
